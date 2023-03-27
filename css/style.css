@@ -1,1 +1,9 @@
-
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+.body{
+    background-color: #F4E9CD;
+}
+.text{
+    font-family: 'Courier New', Courier, monospace;
+}
