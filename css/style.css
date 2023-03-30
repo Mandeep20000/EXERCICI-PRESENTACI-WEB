@@ -1,31 +1,292 @@
 *
-.body{
-    background-color: #f4f9cb;
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main 
+{
+  margin-top: 50px;
+}
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+header
+{
+  position: fixed;
+  top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333;
+}
+nav 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+}
+nav ul 
+{
+display: flex;
+list-style: none;
+}
+nav ul li 
+{
+margin: 0 10px;
+}
+nav ul li a 
+{
+color: #fff;
+text-decoration: none;
+padding: 10px;
+}
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+.sliderPrime
+{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+}
+.slider
+{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slides
+{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+.slides input
+{
+  display: none;
+}
+.slide
+{
+  width: 20%;
+  transition: 2s;
+}
+.slide img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nav-manual
+{
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn
+{
+  border: 16px solid #ff00d4;
+  padding: 0px;
+  cursor: pointer;
+  transition: 1s;
+}
+.manual-btn:not(:last-child)
+{
+  margin-right: 100px;
+}
+.manual-btn:hover
+{
+  background-color: #e5e5e5;
+}
+#radio1:checked ~ .first
+{
+  margin-left: 0;
+}
+#radio2:checked ~ .first
+{
+  margin-left: -20%;
+}
+#radio3:checked ~ .first
+{
+  margin-left: -40%;
+}
+#radio4:checked ~ .first
+{
+  margin-left: -60%;
+}
+.nav-auto
+{
+  position: absolute;
+  display: flex;
+  width: 1000px;
+  justify-content: center;
+  margin-top: 460px;
+}
+.nav-auto div
+{
+  border: 0px solid #e5e5e5;
+  padding: 0px;
+  border-radius: 0px;
+  transition: 1s;
+}
+.nav-auto div:not(:last-child)
+{
+  margin-right: 0px;
+}
+#radio1:checked ~ .nav-auto .auto-btn1
+{
+  background-color: #e5e5e5;
+}
+#radio2:checked ~ .nav-auto .auto-btn2
+{
+  background-color: #e5e5e5;
+}
+#radio3:checked ~ .nav-auto .auto-btn3
+{
+  background-color: #e5e5e5;
+}
+#radio4:checked ~ .nav-auto .auto-btn4
+{
+  background-color: #e5e5e5;
+}
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+.bioAri{
+  float:left;
+  width: 300px;
+  height: 300px;
+  text-align: justify;
+  padding: 1px;
+  
+}
+.bioBernat{
+  float: left;
+  width: 300px;
+  height: 300px;
+  text-align: justify;
+  padding: 1px;
+  
+}
+.bioMarcel{
+  float: left;
+  width: 300px;
+  height: 300px;
+  text-align: justify;
+  padding: 1px;
+  
+}
+.bioToni{
+  float:left;
+  width: 300px;
+  height: 300px;
+  text-align: justify;
+  padding: 1px;
+.image-section
+{
+  display: block;
+  background-color: #ccc;
+}
+.galeria
+{
+  font-family: 'open sans';
+}
+.galeria h1
+{
+  text-align: center;
+  margin: 20px 0 15px 0;
+  font-weight: 300;
+}
+.contenedor-imagenes
+{
+  display: flex;
+  width: 85%;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 3px;
+}
+.contenedor-imagenes .imagen
+{
+  width: 32%;
+  position: relative;
+  height: 250px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,.75);
+}
+.imagen img /*pq es veigi be la foto*/
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay
+{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background: rgba(0,118,192,0.781);
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  overflow: hidden;
+}
+.overlay h2/* esto es pa poner el texto en el centro*/
+{ 
+  color:white;
+  font-weight: 300%;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+}
+.imagen:hover .overlay
+{
+  height: 100%;
+  cursor: pointer;
+}
+@media  screen and (max-width: 1000px)/*PEL MOBIL , PQ LA PANTALLA QUEDI AJUSTADA*/
+{
+  .contenedor-imagenes
+  {
+    width: 95%;
+  }
 }
 
-.text{
-    font-family:'Courier New', Courier, monospace;
-    
-} 
-
-.imatge img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.contenedor-imagenes{
-    display: flex;
-    width: 85%;
-    margin: auto;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    border-radius: 3px;
+@media screen and( max-width:700px) 
+{
+  .contenedor-imagenes
+  {
+    width: 90%;
+  }
+  .contenedor-imagenes .imagen
+  {
+    width: 48%;
   }
   
-  .contenedor-imagenes .imagen{
-    width: 32%;
-    position: relative;
-    height: 250px;
-    margin-bottom: 5px;
-    box-shadow:
+}
+
+@media screen and( max-width:450px)
+{
+  h1
+  {
+    font-size: 22px;
+  }
+  .contenedor-imagenes
+  {
+    width: 98%;
+  }
+  .contenedor-imagenes .imagen
+  {
+    width: 80%;
+  }  
+}
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
